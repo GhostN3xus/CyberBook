@@ -48,9 +48,76 @@ button{cursor:pointer}
 .page h3{font-size:16px;margin:14px 0 6px}
 .page p{color:var(--muted);line-height:1.58}
 .code{background:#0b1523;border:1px solid var(--border);border-radius:10px;padding:12px;font-family:var(--mono);font-size:13px;overflow:auto}
+.inlineCode{display:inline-block;padding:0 6px;border-radius:6px;background:rgba(122,209,255,.12);border:1px solid var(--border);font-family:var(--mono);font-size:.9em}
 .kbd{font-family:var(--mono);border:1px solid var(--border);border-radius:6px;padding:2px 6px}
 .newsItem{padding:12px;border-bottom:1px solid var(--border)}
 .newsMeta{font-size:12px;color:var(--muted)}
 .readProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;z-index:50}
+.stack{display:grid;gap:12px}
 @media (max-width:980px){ .container{flex-direction:column} .sidebar{width:100%} .headerInner{padding:12px} }
 @keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+body.appBody{margin:0;min-height:100vh;color:var(--fg);background:linear-gradient(180deg,#060f20 0%, var(--bg) 60%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;display:flex;flex-direction:column}
+.appShell{max-width:1100px;width:100%;margin:0 auto;padding:32px 20px 48px;display:flex;flex-direction:column;gap:24px}
+.appHeader{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px;border-radius:var(--radius);border:1px solid var(--border);background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));box-shadow:var(--shadow)}
+.appHeader h1{margin:0;font-size:24px}
+.appHeader p{margin:0;color:var(--muted)}
+.appHeader .navLink{font-size:14px}
+.appMain{display:grid;gap:20px}
+.appGrid{display:grid;grid-template-columns:260px 1fr;gap:20px}
+.appPanel{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:18px}
+.appColumn{display:grid;gap:20px}
+.appNav{display:grid;gap:10px}
+.appNav button{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:rgba(122,209,255,.06);color:var(--fg);font-weight:600;text-align:left;transition:background .2s, transform .2s}
+.appNav button.is-active{background:linear-gradient(90deg, rgba(122,209,255,.16), rgba(84,227,201,.12));border-color:rgba(122,209,255,.3)}
+.appNav button:hover{transform:translateX(2px)}
+.appActions{display:grid;gap:10px;margin-top:12px}
+.appActions .btn,.appActions button,.appActions label{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--accent);font-weight:600;text-align:center;cursor:pointer}
+.appActions .btn{background:var(--accent);color:#05142a;border:none}
+.appActions .btn.btnGhost{background:transparent;color:var(--accent);border:1px solid var(--border)}
+.appPanel input[type="file"]{display:none}
+.formGrid{display:grid;gap:12px}
+.formGrid label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted)}
+.formGrid input,.formGrid textarea,.formGrid select{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,.15);color:var(--fg);font-size:14px}
+.formGrid input.has-error,.formGrid textarea.has-error,.formGrid select.has-error{border-color:var(--danger);box-shadow:0 0 0 1px rgba(255,107,129,.2)}
+.formGrid textarea{min-height:120px;resize:vertical}
+.formActions{display:flex;flex-wrap:wrap;gap:10px}
+.formActions .btn{flex:0 0 auto}
+.appList{display:grid;gap:12px}
+.appListItem{padding:16px;border-radius:var(--radius);border:1px solid var(--border);background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.04));display:grid;gap:8px}
+.appListItem h3{margin:0;font-size:16px}
+.appListItem p{margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+.appListItem .badge{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;background:rgba(122,209,255,.08);border:1px solid var(--border);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+.appListItem .meta{font-size:12px;color:var(--muted)}
+.appListItem .actions{display:flex;flex-wrap:wrap;gap:8px}
+.appListItem .actions button{padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--accent);font-size:12px;cursor:pointer}
+.appEmpty{padding:16px;border-radius:var(--radius);border:1px dashed var(--border);color:var(--muted);text-align:center}
+.statusMessage{font-size:13px;color:var(--muted)}
+.terminalShell{display:flex;flex-direction:column;gap:16px}
+.terminalWindow{background:#050c1c;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:16px;font-family:var(--mono);min-height:280px;display:flex;flex-direction:column}
+.terminalHeader{display:flex;gap:6px;margin-bottom:12px}
+.terminalHeader span{width:10px;height:10px;border-radius:50%;display:inline-block;background:rgba(255,255,255,.12)}
+.terminalHeader span:nth-child(1){background:#ff5f57}
+.terminalHeader span:nth-child(2){background:#fdbc2e}
+.terminalHeader span:nth-child(3){background:#28c840}
+.terminalOutput{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--fg)}
+.terminalLine{display:flex;gap:8px;align-items:flex-start;white-space:pre-wrap}
+.terminalLine .prompt{color:var(--accent)}
+.terminalPrompt{display:flex;align-items:center;gap:8px;margin-top:12px}
+.terminalPrompt .prompt{color:var(--accent)}
+.terminalPrompt input{flex:1;padding:8px 10px;border-radius:8px;border:1px solid rgba(122,209,255,.25);background:rgba(12,24,46,.75);color:var(--fg);font-family:var(--mono);font-size:14px}
+.terminalHint{color:var(--muted);font-size:12px}
+.newsGrid{display:grid;gap:16px}
+.newsCard{border-radius:var(--radius);border:1px solid var(--border);padding:16px;background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.03));display:grid;gap:10px}
+.newsCard h2{margin:0;font-size:18px}
+.newsCard p{margin:0;color:var(--muted);line-height:1.5}
+.newsCard footer{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12px;color:var(--muted)}
+.filterBar{display:flex;flex-wrap:wrap;gap:12px}
+.filterBar input,.filterBar select{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:rgba(0,0,0,.15);color:var(--fg)}
+.filterBar button{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--accent);font-weight:600;cursor:pointer}
+.srOnly{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+@media (max-width:920px){
+  .appGrid{grid-template-columns:1fr}
+  .appShell{padding:24px 16px 40px}
+}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CyberBook — Notícias &amp; Buscas</title>
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body class="appBody">
+  <div class="appShell">
+    <header class="appHeader">
+      <div>
+        <h1>Radar de notícias</h1>
+        <p>Acompanhe vulnerabilidades, incidentes e atualizações de fontes confiáveis em um só lugar.</p>
+      </div>
+      <a class="navLink" href="/">← Voltar para o CyberBook</a>
+    </header>
+    <main class="appMain">
+      <section class="appPanel">
+        <h2 class="navTitle">Filtrar resultados</h2>
+        <div class="filterBar">
+          <label class="srOnly" for="searchNews">Buscar por palavra-chave</label>
+          <input id="searchNews" type="search" placeholder="Ex.: ransomware, CVE-2024"/>
+          <label class="srOnly" for="sourceFilter">Filtrar por fonte</label>
+          <select id="sourceFilter"></select>
+          <button id="refreshNews" type="button">Atualizar</button>
+        </div>
+        <div id="newsStatus" class="statusMessage" role="status" aria-live="polite"></div>
+      </section>
+      <section class="appPanel">
+        <h2 class="navTitle">Últimas publicações</h2>
+        <div id="newsList" class="newsGrid" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <script src="/news/news.js" defer></script>
+</body>
+</html>

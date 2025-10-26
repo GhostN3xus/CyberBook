@@ -1,4 +1,3 @@
-
 (function(){
   const root = document.documentElement;
   const key='cb.theme';
@@ -6,6 +5,9 @@
   window.addEventListener('DOMContentLoaded', ()=>{
     const saved = localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');
     apply(saved);
-    document.getElementById('themeToggle').addEventListener('click', ()=> apply(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    const toggle = document.getElementById('themeToggle');
+    if (toggle){
+      toggle.addEventListener('click', ()=> apply(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+    }
   });
 })();
