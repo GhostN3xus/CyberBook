@@ -1,0 +1,56 @@
+
+:root{
+  --bg:#0a1224; --panel:#0d172c; --fg:#e7eef8; --muted:#9fb0c8;
+  --card:#0f1a2c; --border:rgba(255,255,255,.08);
+  --accent:#7ad1ff; --accent2:#54e3c9; --danger:#ff6b81; --success:#6be39f;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "JetBrains Mono", "Roboto Mono", monospace;
+  --radius:14px; --shadow:0 12px 32px rgba(2,6,23,.5);
+}
+[data-theme="light"]{
+  --bg:#f6f9ff; --panel:#eef3ff; --fg:#0c1020; --muted:#3d4760;
+  --card:#ffffff; --border:rgba(0,0,0,.08);
+  --accent:#1252ff; --accent2:#00c2a8;
+  --shadow:0 10px 30px rgba(8,12,25,.08);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial;color:var(--fg);background:linear-gradient(180deg,#060f20 0%, var(--bg) 60%);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+button{cursor:pointer}
+.container{display:flex;min-height:100vh}
+.sidebar{width:320px;padding:28px;border-right:1px solid var(--border);background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px)}
+.brand{display:flex;gap:12px;align-items:center;margin-bottom:18px}
+.brandLogo{width:48px;height:48px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.brandTitle{margin:0;font-size:18px;letter-spacing:.3px}
+.brandSub{margin:0;color:var(--muted);font-size:12px}
+.card{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02));padding:16px;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow)}
+.searchBox{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--fg)}
+.navTitle{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;margin:16px 0 8px}
+.navList{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.navLink{display:flex;align-items:center;gap:10px;padding:10px;border-radius:10px;color:var(--fg);border:1px solid transparent;transition:transform .15s ease, background .2s}
+.navLink:hover{background:linear-gradient(90deg, rgba(122,209,255,.08), rgba(84,227,201,.03));border-color:rgba(122,209,255,.12);transform:translateX(2px)}
+.btn{background:var(--accent);color:#05142a;padding:8px 12px;border-radius:10px;border:none;font-weight:600}
+.btnGhost{background:transparent;border:1px solid var(--border);color:var(--accent)}
+.themeToggle{width:100%;margin-top:8px}
+.stats{margin-top:12px;color:var(--muted);font-size:13px}
+.main{flex:1;display:flex;flex-direction:column;overflow:auto}
+.header{position:sticky;top:0;z-index:20;background:linear-gradient(180deg, rgba(10,18,36,.95), rgba(10,18,36,.75));backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.headerInner{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;padding:12px 24px}
+.breadcrumbs{color:var(--muted);font-size:13px}
+.content{max-width:1100px;margin:18px auto;padding:0 24px 40px}
+.hero{display:flex;gap:24px;align-items:center;background:linear-gradient(90deg, rgba(122,209,255,.08), rgba(84,227,201,.03));border:1px solid var(--border);border-radius:var(--radius);padding:18px;animation:fadeIn .3s ease}
+.heroTitle{margin:0;font-size:22px}
+.heroText{margin:8px 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:16px}
+.tile{padding:16px;border-radius:var(--radius);border:1px solid var(--border);background:linear-gradient(180deg,var(--card), rgba(255,255,255,0.02))}
+.page{background:linear-gradient(180deg,var(--card), rgba(255,255,255,0));border:1px solid var(--border);border-radius:var(--radius);padding:18px;animation:fadeIn .25s ease}
+.page h1{font-size:22px;margin:0 0 8px}
+.page h2{font-size:18px;margin:18px 0 8px}
+.page h3{font-size:16px;margin:14px 0 6px}
+.page p{color:var(--muted);line-height:1.58}
+.code{background:#0b1523;border:1px solid var(--border);border-radius:10px;padding:12px;font-family:var(--mono);font-size:13px;overflow:auto}
+.kbd{font-family:var(--mono);border:1px solid var(--border);border-radius:6px;padding:2px 6px}
+.newsItem{padding:12px;border-bottom:1px solid var(--border)}
+.newsMeta{font-size:12px;color:var(--muted)}
+.readProgress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent2));width:0;z-index:50}
+@media (max-width:980px){ .container{flex-direction:column} .sidebar{width:100%} .headerInner{padding:12px} }
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
