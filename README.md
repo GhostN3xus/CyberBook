@@ -6,6 +6,8 @@
 - **CSP Reporting**: `/api/csp-report` (POST) para receber relatórios (log-only).
 - **News**: agregador RSS consolidado em `/api/news`.
 - **Busca**: full-text local simples nos capítulos.
+- **Terminal lúdico**: comandos fictícios para treinos, sem execução real.
+- **Páginas vivas**: home, sobre, políticas e capítulos com markdown aprimorado.
 - **CSP/Headers**: mesmos reforços (CSP rígida, COOP/COEP/CORP, HSTS...).
 
 ## Deploy (Azure SWA Free)

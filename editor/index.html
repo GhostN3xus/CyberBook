@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CyberBook — Editor de Cadastros</title>
+  <link rel="icon" href="/assets/img/logo.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body class="appBody">
+  <div class="appShell">
+    <header class="appHeader">
+      <div>
+        <h1>Editor de Cadastros</h1>
+        <p>Organize usuários, aplicações, responsáveis e projetos usando armazenamento local seguro.</p>
+      </div>
+      <a class="navLink" href="/">← Voltar para o CyberBook</a>
+    </header>
+    <main class="appMain">
+      <div class="appGrid">
+        <aside class="appPanel">
+          <h2 class="navTitle">Coleções</h2>
+          <nav id="entityTypes" class="appNav" aria-label="Coleções cadastradas"></nav>
+          <div class="appActions">
+            <button id="newEntry" class="btn">Novo cadastro</button>
+            <button id="exportData" class="btn btnGhost">Exportar JSON</button>
+            <label for="importFile" class="btn btnGhost">Importar JSON</label>
+            <input id="importFile" type="file" accept="application/json"/>
+          </div>
+          <div id="status" class="statusMessage" role="status" aria-live="polite"></div>
+        </aside>
+        <div class="appColumn">
+          <section class="appPanel" aria-labelledby="formTitle">
+            <h2 id="formTitle" class="navTitle">Cadastro</h2>
+            <form id="entityForm" class="formGrid" novalidate>
+              <div class="formGrid" id="dynamicFields"></div>
+              <div class="formActions">
+                <button type="submit" class="btn">Salvar</button>
+                <button type="button" id="cancelEdit" class="btn btnGhost">Cancelar</button>
+              </div>
+            </form>
+          </section>
+          <section class="appPanel" aria-labelledby="listTitle">
+            <h2 id="listTitle" class="navTitle">Itens cadastrados</h2>
+            <div id="list" class="appList" aria-live="polite"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="/editor/editor.js" defer></script>
+</body>
+</html>
