@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'; require-trusted-types-for 'script'">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin"/>
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp"/>
+  <meta http-equiv="Cross-Origin-Resource-Policy" content="same-origin"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>CyberBook — Guia Vivo de AppSec</title>
+  <link rel="stylesheet" href="/assets/css/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>CyberBook</h1>
+          <p>Guia Vivo de AppSec</p>
+        </div>
+      </div>
+      <div class="card" style="margin-bottom:12px">
+        <div id="authStatus">Não autenticado</div>
+        <div style="display:flex;gap:8px;margin-top:8px">
+          <button id="loginGithub" class="btn">Login</button>
+          <button id="logout" class="btn ghost">Logout</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="search"><input id="searchInput" placeholder="Buscar (ex.: CSP, IDOR)"></div>
+        <nav>
+          <h2>Capítulos</h2>
+          <ul>
+            <li><a class="nav-link" href="#/chapters/owasp-top-10">OWASP Top 10</a></li>
+            <li><a class="nav-link" href="#/chapters/apis">APIs & Microserviços</a></li>
+            <li><a class="nav-link" href="#/chapters/secure-coding">Secure Coding</a></li>
+            <li><a class="nav-link" href="#/chapters/tools">Ferramentas</a></li>
+            <li><a class="nav-link" href="#/chapters/configlab">ConfigLab</a></li>
+          </ul>
+          <h2>Apps</h2>
+          <ul>
+            <li><a class="nav-link" href="/editor/index.html">Editor</a></li>
+            <li><a class="nav-link" href="/news/index.html">Notícias & Buscas</a></li>
+            <li><a class="nav-link" href="#/cadastros">Cadastros</a></li>
+            <li><a class="nav-link" href="#/admin">Admin</a></li>
+            <li><a class="nav-link" href="#/notes">Notas locais</a></li>
+          </ul>
+          <h2>Páginas</h2>
+          <ul>
+            <li><a class="nav-link" href="#/pages/about">Sobre</a></li>
+            <li><a class="nav-link" href="#/pages/policies">Políticas</a></li>
+            <li><a class="nav-link" href="#/pages/roadmap">Roadmap</a></li>
+            <li><a class="nav-link" href="#/pages/changelog">Changelog</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="stats card" id="stats" style="margin-top:12px"></div>
+    </aside>
+    <main class="main">
+      <section class="hero card">
+        <div class="left">
+          <h2>Bem-vindo, Ivo</h2>
+          <p>Estude, documente, cadastre o inventário de AppSec e administre com segurança rígida.</p>
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <a class="btn" href="#/chapters/owasp-top-10">Começar</a>
+            <a class="btn ghost" href="/news/index.html">Notícias</a>
+          </div>
+        </div>
+      </section>
+      <div id="content" class="section"></div>
+      <div class="footer-note" style="color:#9fb0c8;margin-top:16px">CSP rígida, COOP/COEP/CORP, OAuth SWA. Sem dependências externas.</div>
+    </main>
+  </div>
+  <script src="/scripts/router.js" defer></script>
+  <script src="/scripts/auth.js" defer></script>
+  <script src="/scripts/storage.js" defer></script>
+  <script src="/scripts/search.js" defer></script>
+  <script src="/scripts/cadastros.js" defer></script>
+  <script src="/scripts/admin.js" defer></script>
+</body>
+</html>
