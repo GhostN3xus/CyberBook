@@ -1,0 +1,22 @@
+{
+  "title": "Nossa missão",
+  "mission": "Capacitar equipes de engenharia e segurança com conhecimento acionável, conteúdo versionado e automações para responder rapidamente a vulnerabilidades.",
+  "values": [
+    {
+      "title": "Transparência",
+      "description": "Conteúdo rastreável, fontes oficiais e histórico de mudanças acessível."
+    },
+    {
+      "title": "Colaboração",
+      "description": "Fluxo de trabalho entre desenvolvedores, analistas e arquitetos com contexto compartilhado."
+    },
+    {
+      "title": "Excelência técnica",
+      "description": "Boas práticas revisadas por especialistas e alinhadas a OWASP, NIST e MITRE."
+    }
+  ],
+  "team": {
+    "title": "Equipe multidisciplinar",
+    "description": "Especialistas em AppSec, engenheiros de plataforma e red teamers contribuindo para um ecossistema vivo."
+  }
+}

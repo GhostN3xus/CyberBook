@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "title": "Guia do Guerreiro AppSec",
+    "subtitle": "Centralize conhecimento, práticas e automações para proteger cada camada das suas aplicações.",
+    "ctaPrimary": "Explorar checklists",
+    "ctaSecondary": "Ver guias por linguagem"
+  },
+  "highlights": [
+    {
+      "title": "Mapeie riscos OWASP",
+      "description": "Dashboards interativos com OWASP Top 10 e API Security Top 10, exemplos reais e correções seguras."
+    },
+    {
+      "title": "Governança AppSec",
+      "description": "Painel administrativo com RBAC, auditoria e backup agendado para manter a conformidade contínua."
+    },
+    {
+      "title": "Educação contínua",
+      "description": "Guias práticos, tutoriais e notas personalizadas para equipes multidisciplinares."
+    }
+  ],
+  "search": {
+    "title": "Busca inteligente",
+    "placeholder": "Pesquise por CWE, linguagem, ferramenta ou palavra-chave...",
+    "empty": "Nenhum resultado encontrado. Ajuste os filtros ou tente outro termo."
+  },
+  "sections": {
+    "latestNews": "Últimos artigos e notícias",
+    "featuredTools": "Ferramentas em destaque",
+    "learningPaths": "Trilhas de aprendizado"
+  }
+}

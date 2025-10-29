@@ -1,0 +1,11 @@
+{
+  "title": "Contato e suporte",
+  "description": "Envie dúvidas, reporte incidentes ou solicite acesso administrativo de forma segura.",
+  "fields": {
+    "name": "Nome",
+    "email": "E-mail",
+    "company": "Empresa",
+    "subject": "Assunto",
+    "message": "Mensagem"
+  }
+}

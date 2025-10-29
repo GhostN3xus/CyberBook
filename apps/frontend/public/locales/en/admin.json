@@ -1,0 +1,19 @@
+{
+  "dashboard": {
+    "title": "Administrative dashboard",
+    "subtitle": "Manage vulnerabilities, articles, documentation links and audits in one place.",
+    "cards": {
+      "content": "Published content",
+      "pending": "Pending reviews",
+      "alerts": "Security alerts",
+      "backups": "Last backup"
+    }
+  },
+  "settings": {
+    "title": "Settings & governance",
+    "users": "Users & roles",
+    "permissions": "Permissions",
+    "logs": "Audit logs",
+    "backups": "Backups"
+  }
+}

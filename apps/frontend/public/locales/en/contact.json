@@ -1,0 +1,11 @@
+{
+  "title": "Contact & support",
+  "description": "Send questions, report incidents or request administrative access securely.",
+  "fields": {
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "subject": "Subject",
+    "message": "Message"
+  }
+}

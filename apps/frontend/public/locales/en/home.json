@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "title": "AppSec Warrior Guide",
+    "subtitle": "Centralize knowledge, practices and automation to defend every layer of your applications.",
+    "ctaPrimary": "Explore checklists",
+    "ctaSecondary": "View language guides"
+  },
+  "highlights": [
+    {
+      "title": "Map OWASP risks",
+      "description": "Interactive dashboards for OWASP Top 10 and API Security Top 10 with real exploits and secure fixes."
+    },
+    {
+      "title": "AppSec governance",
+      "description": "Administrative panel with RBAC, auditing and scheduled backups to maintain continuous compliance."
+    },
+    {
+      "title": "Continuous education",
+      "description": "Hands-on guides, tutorials and personalized notes for multidisciplinary teams."
+    }
+  ],
+  "search": {
+    "title": "Intelligent search",
+    "placeholder": "Search by CWE, language, tool or keyword...",
+    "empty": "No results found. Adjust filters or try another keyword."
+  },
+  "sections": {
+    "latestNews": "Latest articles and news",
+    "featuredTools": "Featured tools",
+    "learningPaths": "Learning paths"
+  }
+}

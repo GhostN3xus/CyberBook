@@ -1,0 +1,22 @@
+{
+  "title": "Our mission",
+  "mission": "Empower engineering and security teams with actionable knowledge, versioned content and automation to react quickly to vulnerabilities.",
+  "values": [
+    {
+      "title": "Transparency",
+      "description": "Traceable content, official sources and accessible change history."
+    },
+    {
+      "title": "Collaboration",
+      "description": "Workflows between developers, analysts and architects with shared context."
+    },
+    {
+      "title": "Technical excellence",
+      "description": "Expert-curated practices aligned with OWASP, NIST and MITRE guidance."
+    }
+  ],
+  "team": {
+    "title": "Multidisciplinary team",
+    "description": "AppSec specialists, platform engineers and red teamers contributing to a living ecosystem."
+  }
+}

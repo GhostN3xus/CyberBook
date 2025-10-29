@@ -1,0 +1,17 @@
+{
+  "owaspTop10": {
+    "title": "OWASP Top 10",
+    "description": "Priorize riscos críticos com exemplos de exploração, impactos de negócio e contramedidas verificadas."
+  },
+  "owaspApi": {
+    "title": "OWASP API Security Top 10",
+    "description": "Proteja APIs e microserviços com foco em autenticação robusta, autorização granular e governança de dados."
+  },
+  "filters": {
+    "risk": "Risco",
+    "language": "Linguagem",
+    "cwe": "CWE",
+    "complexity": "Complexidade",
+    "category": "Categoria"
+  }
+}
