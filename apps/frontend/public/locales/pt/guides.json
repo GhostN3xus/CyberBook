@@ -1,0 +1,16 @@
+{
+  "title": "Guias de correção por linguagem",
+  "intro": "Cada seção apresenta vulnerabilidades comuns, exemplos inseguros e versões corrigidas com links oficiais de referência.",
+  "languages": {
+    "javascript": "JavaScript / Node.js / TypeScript",
+    "python": "Python",
+    "java": "Java",
+    "csharp": "C# / .NET",
+    "go": "Go",
+    "php": "PHP",
+    "ruby": "Ruby",
+    "ccpp": "C / C++",
+    "rust": "Rust",
+    "mobile": "Swift / Kotlin"
+  }
+}

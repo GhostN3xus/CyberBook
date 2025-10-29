@@ -1,0 +1,25 @@
+{
+  "name": "guia-guerreiro-appsec",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Monorepo do portal Guia do Guerreiro AppSec (Next.js + NestJS + Prisma)",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter frontend dev\" \"pnpm --filter backend start:dev\"",
+    "build:all": "pnpm --filter frontend build && pnpm --filter backend build",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --filter backend test",
+    "prisma:generate": "pnpm --filter backend prisma generate",
+    "prisma:migrate": "pnpm --filter backend prisma migrate deploy",
+    "prisma:seed": "pnpm --filter backend prisma db seed"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "workspaces": [
+    "apps/frontend",
+    "apps/backend"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

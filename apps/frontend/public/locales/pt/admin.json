@@ -1,0 +1,19 @@
+{
+  "dashboard": {
+    "title": "Painel administrativo",
+    "subtitle": "Gerencie vulnerabilidades, artigos, links de documentação e auditorias em um único lugar.",
+    "cards": {
+      "content": "Conteúdo publicado",
+      "pending": "Revisões pendentes",
+      "alerts": "Alertas de segurança",
+      "backups": "Último backup"
+    }
+  },
+  "settings": {
+    "title": "Configurações e governança",
+    "users": "Usuários e papéis",
+    "permissions": "Permissões",
+    "logs": "Logs de auditoria",
+    "backups": "Backups"
+  }
+}

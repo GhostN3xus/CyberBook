@@ -1,0 +1,35 @@
+{
+  "siteTitle": "Guia do Guerreiro AppSec",
+  "siteDescription": "Portal bilíngue de referência para segurança de aplicações, guias OWASP, correções e ferramentas.",
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "owaspTop10": "OWASP Top 10",
+    "owaspApi": "OWASP API",
+    "guides": "Guias por Linguagem",
+    "cwe": "Biblioteca CWE",
+    "tutorials": "Tutoriais",
+    "bestPractices": "Boas Práticas",
+    "tools": "Ferramentas",
+    "docs": "Documentações",
+    "news": "Notícias",
+    "login": "Entrar",
+    "contact": "Contato",
+    "admin": "Admin"
+  },
+  "actions": {
+    "learnMore": "Saiba mais",
+    "explore": "Explorar",
+    "filter": "Filtrar",
+    "clear": "Limpar",
+    "addNote": "Adicionar anotação",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "search": "Buscar",
+    "viewAll": "Ver tudo"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados.",
+    "madeWith": "Desenvolvido com foco em segurança e acessibilidade."
+  }
+}

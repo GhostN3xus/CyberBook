@@ -1,0 +1,17 @@
+{
+  "owaspTop10": {
+    "title": "OWASP Top 10",
+    "description": "Prioritize critical risks with exploitation examples, business impact and verified countermeasures."
+  },
+  "owaspApi": {
+    "title": "OWASP API Security Top 10",
+    "description": "Harden APIs and microservices with strong authentication, fine-grained authorization and data governance."
+  },
+  "filters": {
+    "risk": "Risk",
+    "language": "Language",
+    "cwe": "CWE",
+    "complexity": "Complexity",
+    "category": "Category"
+  }
+}

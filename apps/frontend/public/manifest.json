@@ -1,0 +1,9 @@
+{
+  "name": "Guia do Guerreiro AppSec",
+  "short_name": "AppSecGuide",
+  "start_url": "/pt",
+  "display": "standalone",
+  "background_color": "#0f1729",
+  "theme_color": "#00f5a0",
+  "icons": []
+}

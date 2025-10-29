@@ -1,0 +1,16 @@
+{
+  "title": "Remediation guides per language",
+  "intro": "Each section outlines common weaknesses, insecure snippets and hardened implementations with official references.",
+  "languages": {
+    "javascript": "JavaScript / Node.js / TypeScript",
+    "python": "Python",
+    "java": "Java",
+    "csharp": "C# / .NET",
+    "go": "Go",
+    "php": "PHP",
+    "ruby": "Ruby",
+    "ccpp": "C / C++",
+    "rust": "Rust",
+    "mobile": "Swift / Kotlin"
+  }
+}
