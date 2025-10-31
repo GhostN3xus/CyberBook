@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { create } from 'zustand';
+import { sanitizePlainText } from '../lib/sanitization';
 
 interface Note {
   id: string;
@@ -18,14 +19,20 @@ interface NotesState {
 
 const NOTES_KEY = 'appsec-warrior-notes';
 
+const sanitizeNoteInput = (note: Omit<Note, 'id' | 'updatedAt'>) => ({
+  title: sanitizePlainText(note.title),
+  content: sanitizePlainText(note.content)
+});
+
 const usePersistedStore = create<NotesState>((set, get) => ({
   notes: {},
   setNote: (id, note) => {
+    const sanitizedNote = sanitizeNoteInput(note);
     const next = {
       ...get().notes,
       [id]: {
         id,
-        ...note,
+        ...sanitizedNote,
         updatedAt: new Date().toISOString()
       }
     };
@@ -53,7 +60,15 @@ export function useNotes() {
     const saved = localStorage.getItem(NOTES_KEY);
     if (saved) {
       const parsed = JSON.parse(saved) as Record<string, Note>;
-      usePersistedStore.setState({ notes: parsed });
+      const sanitized = Object.entries(parsed).reduce<Record<string, Note>>((acc, [key, value]) => {
+        acc[key] = {
+          ...value,
+          title: sanitizePlainText(value.title),
+          content: sanitizePlainText(value.content)
+        };
+        return acc;
+      }, {});
+      usePersistedStore.setState({ notes: sanitized });
     }
     setHydrated(true);
   }, []);

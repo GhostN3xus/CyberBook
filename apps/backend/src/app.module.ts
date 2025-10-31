@@ -10,6 +10,7 @@ import { ContentModule } from './content/content.module';
 import { NotesModule } from './notes/notes.module';
 import { AdminModule } from './admin/admin.module';
 import { AuditInterceptor } from './common/interceptors/audit.interceptor';
+import { SecurityModule } from './security/security.module';
 
 @Module({
   imports: [
@@ -29,7 +30,8 @@ import { AuditInterceptor } from './common/interceptors/audit.interceptor';
     UsersModule,
     ContentModule,
     NotesModule,
-    AdminModule
+    AdminModule,
+    SecurityModule
   ],
   providers: [
     {
