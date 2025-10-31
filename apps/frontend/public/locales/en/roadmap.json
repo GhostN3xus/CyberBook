@@ -1,0 +1,64 @@
+{
+  "title": "Security & Product Roadmap",
+  "intro": "Track our progress as we harden CyberBook and expand the learning experience. Each stream highlights what is delivered, in-flight or planned next.",
+  "sections": [
+    {
+      "title": "Security Foundations",
+      "description": "Hardening authentication, data protections and platform safeguards.",
+      "items": [
+        { "label": "Nonce-based CSP and sanitized content delivery", "status": "done" },
+        { "label": "OAuth hardening with state validation and PKCE", "status": "in-progress" },
+        { "label": "Automated dependency and secret scanning in CI", "status": "planned" }
+      ]
+    },
+    {
+      "title": "Observability & Operations",
+      "description": "Visibility, reliability and operational excellence for the platform.",
+      "items": [
+        { "label": "Public health endpoint for uptime monitors", "status": "done" },
+        { "label": "Structured security event logging with correlation IDs", "status": "in-progress" },
+        { "label": "Service-level dashboards with latency and error alerts", "status": "planned" }
+      ]
+    },
+    {
+      "title": "Content & Community",
+      "description": "Educational experiences that empower teams to adopt secure-by-design habits.",
+      "items": [
+        { "label": "Bilingual knowledge base refresh with curated pathways", "status": "in-progress" },
+        { "label": "Hands-on academy with challenges and certifications", "status": "planned" },
+        { "label": "Community driven playbooks and threat briefings", "status": "planned" }
+      ]
+    }
+  ],
+  "pages": {
+    "title": "Upcoming experiences",
+    "description": "These sections will expand the portal beyond the current 16 core pages.",
+    "items": [
+      {
+        "name": "Use Case Gallery",
+        "status": "planned",
+        "description": "Real-world AppSec adoption stories filtered by industry and team maturity."
+      },
+      {
+        "name": "CyberBook Academy",
+        "status": "planned",
+        "description": "Interactive missions with labs, walkthroughs and skill tracking."
+      },
+      {
+        "name": "Operations Status",
+        "status": "in-progress",
+        "description": "Live service availability, maintenance windows and incident history."
+      },
+      {
+        "name": "Security Reports",
+        "status": "planned",
+        "description": "Centralized export of audit reports, CSP findings and compliance guides."
+      }
+    ]
+  },
+  "status": {
+    "done": "Delivered",
+    "in-progress": "In progress",
+    "planned": "Planned"
+  }
+}

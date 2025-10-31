@@ -6,6 +6,7 @@ import { ConfigService } from '@nestjs/config';
 import { ThrottlerGuard } from '@nestjs/throttler';
 import { RateLimiterMemory } from 'rate-limiter-flexible';
 import { randomBytes } from 'crypto';
+import { json, urlencoded } from 'express';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -41,7 +42,9 @@ async function bootstrap() {
     exposedHeaders: ['X-CSP-Nonce'],
     maxAge: 600
   });
-
+  
+  app.use(json({ limit: '1mb' }));
+  app.use(urlencoded({ extended: true, limit: '1mb' }));
   app.use((req, res, next) => {
     const nonce = randomBytes(16).toString('base64');
     (res.locals ??= {}).cspNonce = nonce;

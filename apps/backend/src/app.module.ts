@@ -11,6 +11,7 @@ import { NotesModule } from './notes/notes.module';
 import { AdminModule } from './admin/admin.module';
 import { AuditInterceptor } from './common/interceptors/audit.interceptor';
 import { SecurityModule } from './security/security.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -31,6 +32,8 @@ import { SecurityModule } from './security/security.module';
     ContentModule,
     NotesModule,
     AdminModule,
+    SecurityModule,
+    HealthModule
     SecurityModule
   ],
   providers: [
