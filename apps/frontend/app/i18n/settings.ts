@@ -20,5 +20,8 @@ export const namespaces = [
   'admin',
   'contact',
   'legal',
-  'roadmap'
+  'roadmap',
+  'use-cases',
+  'academy',
+  'status'
 ] as const;

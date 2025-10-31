@@ -1,0 +1,16 @@
+{
+  "title": "CyberBook Academy",
+  "intro": "Trilhas imersivas com laboratórios práticos e avaliações para acelerar a maturidade em AppSec.",
+  "labels": {
+    "duration": "Carga horária",
+    "difficulty": "Nível",
+    "lessons": "Aulas",
+    "cta": "Ver trilha completa"
+  },
+  "difficulty": {
+    "foundation": "Fundamentos",
+    "professional": "Profissional",
+    "expert": "Especialista"
+  },
+  "empty": "Nenhum módulo encontrado."
+}

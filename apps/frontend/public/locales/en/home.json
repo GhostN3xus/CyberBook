@@ -27,6 +27,8 @@
   "sections": {
     "latestNews": "Latest articles and news",
     "featuredTools": "Featured tools",
-    "learningPaths": "Learning paths"
+    "learningPaths": "Learning paths",
+    "useCases": "Industry use cases",
+    "academy": "CyberBook Academy tracks"
   }
 }

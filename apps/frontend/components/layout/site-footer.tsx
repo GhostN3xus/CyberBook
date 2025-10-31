@@ -14,6 +14,9 @@ export function SiteFooter({ locale }: FooterProps) {
         <span>&copy; {new Date().getFullYear()} {t('siteTitle')}.</span>
         <div className="flex items-center gap-4">
           <span>{t('footer.madeWith')}</span>
+          <a href={`/${locale}/status`} className="text-brand-neon">
+            {locale === 'pt' ? 'Status' : 'Status'}
+          </a>
           <a href={`/${locale}/politica`} className="text-brand-neon">
             {locale === 'pt' ? 'Privacidade' : 'Privacy'}
           </a>

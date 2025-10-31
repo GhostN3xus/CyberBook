@@ -8,8 +8,20 @@ export interface HealthReport {
   uptime: number;
   timestamp: string;
   version: string;
+  environment: string;
   checks: {
     database: 'up' | 'down';
+  };
+  system: {
+    nodeVersion: string;
+    memory: {
+      rss: number;
+      heapTotal: number;
+      heapUsed: number;
+    };
+  };
+  metadata?: {
+    commitSha?: string | null;
   };
 }
 
@@ -28,12 +40,31 @@ export class HealthService {
 
     const status = checks.database === 'up' ? 'ok' : 'degraded';
 
+    const memoryUsage = process.memoryUsage();
+    const toMb = (value: number) => Number((value / 1024 / 1024).toFixed(2));
+
+    const system = {
+      nodeVersion: process.version,
+      memory: {
+        rss: toMb(memoryUsage.rss),
+        heapTotal: toMb(memoryUsage.heapTotal),
+        heapUsed: toMb(memoryUsage.heapUsed)
+      }
+    };
+
+    const metadata: HealthReport['metadata'] = {
+      commitSha: this.configService.get<string>('COMMIT_SHA') ?? null
+    };
+
     return {
       status,
       uptime: process.uptime(),
       timestamp: new Date().toISOString(),
       version: this.configService.get<string>('npm_package_version') ?? '0.0.0',
-      checks
+      environment: this.configService.get<string>('NODE_ENV') ?? 'development',
+      checks,
+      system,
+      metadata
     };
   }
 }
