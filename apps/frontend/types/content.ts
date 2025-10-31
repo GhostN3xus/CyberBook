@@ -7,7 +7,7 @@ export interface SearchableContent {
   title: LocalizedString | string;
   summary: LocalizedString | string;
   slug?: string;
-  type: 'checklist' | 'guide' | 'tutorial' | 'tool' | 'doc' | 'news' | 'note';
+  type: 'checklist' | 'guide' | 'tutorial' | 'tool' | 'doc' | 'news' | 'note' | 'use-case' | 'academy-module';
   tags?: string[];
   keywords?: (LocalizedString | string)[];
   metadata?: Record<string, unknown>;

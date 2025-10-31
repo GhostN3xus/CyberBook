@@ -1,0 +1,16 @@
+{
+  "title": "CyberBook Academy",
+  "intro": "Immersive learning paths with labs and assessments to accelerate AppSec maturity.",
+  "labels": {
+    "duration": "Duration",
+    "difficulty": "Level",
+    "lessons": "Lessons",
+    "cta": "View full path"
+  },
+  "difficulty": {
+    "foundation": "Foundation",
+    "professional": "Professional",
+    "expert": "Expert"
+  },
+  "empty": "No modules available."
+}

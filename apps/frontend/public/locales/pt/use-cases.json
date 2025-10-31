@@ -1,0 +1,22 @@
+{
+  "title": "Casos de Uso Prioritários",
+  "intro": "Aplicações reais do CyberBook para acelerar programas de segurança em diferentes setores.",
+  "filters": {
+    "all": "Todos",
+    "sector": "Setor",
+    "maturity": "Maturidade"
+  },
+  "maturity": {
+    "initial": "Inicial",
+    "intermediate": "Intermediário",
+    "advanced": "Avançado"
+  },
+  "labels": {
+    "sector": "Setor",
+    "maturity": "Maturidade",
+    "outcomes": "Resultados-chave",
+    "outcomesEmpty": "Nenhum resultado informado",
+    "metadata": "Detalhes"
+  },
+  "empty": "Nenhum caso de uso encontrado para os filtros selecionados."
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Priority Use Cases",
+  "intro": "Real-world applications of the CyberBook to accelerate security programs across industries.",
+  "filters": {
+    "all": "All",
+    "sector": "Sector",
+    "maturity": "Maturity"
+  },
+  "maturity": {
+    "initial": "Initial",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "labels": {
+    "sector": "Sector",
+    "maturity": "Maturity",
+    "outcomes": "Key outcomes",
+    "outcomesEmpty": "No outcomes documented",
+    "metadata": "Details"
+  },
+  "empty": "No use cases match the selected filters."
+}

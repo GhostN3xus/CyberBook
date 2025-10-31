@@ -1,0 +1,28 @@
+{
+  "title": "Status da Plataforma",
+  "intro": "Monitoramento do backend CyberBook, incluindo integridade do banco e métricas de runtime.",
+  "labels": {
+    "overall": "Status geral",
+    "version": "Versão",
+    "environment": "Ambiente",
+    "uptime": "Uptime",
+    "checks": "Verificações",
+    "system": "Sistema",
+    "memory": "Memória",
+    "lastUpdate": "Última atualização",
+    "retry": "Recarregar"
+  },
+  "status": {
+    "ok": "Operacional",
+    "degraded": "Degradado",
+    "down": "Indisponível"
+  },
+  "memory": {
+    "rss": "RSS",
+    "heapTotal": "Heap total",
+    "heapUsed": "Heap em uso"
+  },
+  "errors": {
+    "unreachable": "Não foi possível conectar ao backend. Verifique a variável NEXT_PUBLIC_API_BASE_URL."
+  }
+}

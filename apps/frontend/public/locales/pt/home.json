@@ -27,6 +27,8 @@
   "sections": {
     "latestNews": "Últimos artigos e notícias",
     "featuredTools": "Ferramentas em destaque",
-    "learningPaths": "Trilhas de aprendizado"
+    "learningPaths": "Trilhas de aprendizado",
+    "useCases": "Casos de uso por setor",
+    "academy": "Trilhas da CyberBook Academy"
   }
 }

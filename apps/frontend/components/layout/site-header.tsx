@@ -35,9 +35,12 @@ export function SiteHeader({ locale }: Props) {
     { href: `/${locale}/biblioteca-cwe`, label: t('navigation.cwe') },
     { href: `/${locale}/guias-praticos`, label: t('navigation.tutorials') },
     { href: `/${locale}/boas-praticas`, label: t('navigation.bestPractices') },
+    { href: `/${locale}/casos-de-uso`, label: t('navigation.useCases') },
+    { href: `/${locale}/academy`, label: t('navigation.academy') },
     { href: `/${locale}/ferramentas`, label: t('navigation.tools') },
     { href: `/${locale}/documentacoes`, label: t('navigation.docs') },
     { href: `/${locale}/roadmap`, label: t('navigation.roadmap') },
+    { href: `/${locale}/status`, label: t('navigation.status') },
     { href: `/${locale}/noticias`, label: t('navigation.news') },
     { href: `/${locale}/contato`, label: t('navigation.contact') }
   ];

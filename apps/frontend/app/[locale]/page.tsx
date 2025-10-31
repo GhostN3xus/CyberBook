@@ -4,20 +4,32 @@ import { owaspApiTop10 } from '../../data/owasp-api-top10';
 import { tools } from '../../data/tools';
 import { getSanitizedNewsFeed } from '../../lib/news-feed';
 import { tutorials } from '../../data/tutorials';
+import { useCases } from '../../data/use-cases';
+import { academyModules } from '../../data/academy';
+
+type UseCaseMaturity = (typeof useCases)[number]['maturity'];
+type AcademyDifficulty = (typeof academyModules)[number]['difficulty'];
+type UseCaseMaturityKey = `maturity.${UseCaseMaturity}`;
+type AcademyDifficultyKey = `difficulty.${AcademyDifficulty}`;
 import { SearchDialog } from '../../components/search/search-dialog';
 import { slugify } from '../../lib/utils';
 import type { SearchableContent } from '../../types/content';
 
 export default async function HomePage({ params }: { params: { locale: 'pt' | 'en' } }) {
-  const { t, i18n } = await createTranslation(params.locale, ['home', 'common']);
+  const { t, i18n } = await createTranslation(params.locale, ['home', 'common', 'use-cases', 'academy']);
 
   const sanitizedNewsFeed = getSanitizedNewsFeed();
+
+  const useCasesT = i18n.getFixedT(params.locale, 'use-cases');
+  const academyT = i18n.getFixedT(params.locale, 'academy');
 
   const searchContent: SearchableContent[] = [
     ...owaspTop10.map((item) => ({ ...item, slug: `checklists/owasp-top-10#${slugify(item.title.en)}` })),
     ...owaspApiTop10.map((item) => ({ ...item, slug: `checklists/owasp-api-top-10#${slugify(item.title.en)}` })),
     ...tools.map((item) => ({ ...item, slug: `ferramentas#${slugify(typeof item.title === 'string' ? item.title : item.title.en)}` })),
     ...tutorials.map((item) => ({ ...item, slug: `guias-praticos#${slugify(typeof item.title === 'string' ? item.title : item.title.en)}` })),
+    ...useCases.map((item) => ({ ...item })),
+    ...academyModules.map((item) => ({ ...item })),
     ...sanitizedNewsFeed.map((item) => ({ ...item, slug: `noticias#${item.slug}` }))
   ];
 
@@ -118,6 +130,62 @@ export default async function HomePage({ params }: { params: { locale: 'pt' | 'e
                 {typeof tutorial.summary === 'string' ? tutorial.summary : tutorial.summary[params.locale]}
               </p>
             </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">{t('sections.useCases')}</h2>
+          <a className="text-sm text-brand-neon" href={`/${params.locale}/casos-de-uso`}>
+            {i18n.getFixedT(params.locale, 'common')('actions.viewAll')}
+          </a>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {useCases.slice(0, 2).map((useCase) => (
+            <article key={useCase.slug} className="rounded-xl border border-slate-800 bg-slate-900/40 p-6">
+              <div className="flex flex-wrap items-center gap-2 text-xs text-brand-neon">
+                <span className="rounded-full border border-brand-neon/60 px-3 py-1">{useCase.sector}</span>
+                <span className="rounded-full border border-brand-neon/60 px-3 py-1">
+                  {useCasesT(`maturity.${useCase.maturity}` as UseCaseMaturityKey)}
+                </span>
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-brand-neon">
+                {typeof useCase.title === 'string' ? useCase.title : useCase.title[params.locale]}
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                {typeof useCase.summary === 'string' ? useCase.summary : useCase.summary[params.locale]}
+              </p>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-6">
+        <div className="flex items-center justify-between">
+          <h2 className="text-2xl font-semibold">{t('sections.academy')}</h2>
+          <a className="text-sm text-brand-neon" href={`/${params.locale}/academy`}>
+            {i18n.getFixedT(params.locale, 'common')('actions.viewAll')}
+          </a>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {academyModules.slice(0, 2).map((module) => (
+            <article key={module.slug} className="rounded-xl border border-slate-800 bg-slate-900/40 p-6">
+              <div className="flex flex-wrap gap-2 text-xs text-brand-neon">
+                <span className="rounded-full border border-brand-neon/60 px-3 py-1">
+                  {module.durationHours}h
+                </span>
+                <span className="rounded-full border border-brand-neon/60 px-3 py-1">
+                  {academyT(`difficulty.${module.difficulty}` as AcademyDifficultyKey)}
+                </span>
+              </div>
+              <h3 className="mt-3 text-lg font-semibold text-brand-neon">
+                {typeof module.title === 'string' ? module.title : module.title[params.locale]}
+              </h3>
+              <p className="mt-2 text-sm text-slate-300">
+                {typeof module.summary === 'string' ? module.summary : module.summary[params.locale]}
+              </p>
+            </article>
           ))}
         </div>
       </div>

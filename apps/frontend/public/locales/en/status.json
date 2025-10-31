@@ -1,0 +1,28 @@
+{
+  "title": "Platform Status",
+  "intro": "Monitoring for the CyberBook backend including database health and runtime metrics.",
+  "labels": {
+    "overall": "Overall status",
+    "version": "Version",
+    "environment": "Environment",
+    "uptime": "Uptime",
+    "checks": "Checks",
+    "system": "System",
+    "memory": "Memory",
+    "lastUpdate": "Last update",
+    "retry": "Reload"
+  },
+  "status": {
+    "ok": "Operational",
+    "degraded": "Degraded",
+    "down": "Down"
+  },
+  "memory": {
+    "rss": "RSS",
+    "heapTotal": "Heap total",
+    "heapUsed": "Heap used"
+  },
+  "errors": {
+    "unreachable": "Could not reach the backend. Check NEXT_PUBLIC_API_BASE_URL."
+  }
+}
