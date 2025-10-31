@@ -34,6 +34,7 @@ import { HealthModule } from './health/health.module';
     AdminModule,
     SecurityModule,
     HealthModule
+    SecurityModule
   ],
   providers: [
     {

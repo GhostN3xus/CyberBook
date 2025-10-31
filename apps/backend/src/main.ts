@@ -42,10 +42,9 @@ async function bootstrap() {
     exposedHeaders: ['X-CSP-Nonce'],
     maxAge: 600
   });
-
+  
   app.use(json({ limit: '1mb' }));
   app.use(urlencoded({ extended: true, limit: '1mb' }));
-
   app.use((req, res, next) => {
     const nonce = randomBytes(16).toString('base64');
     (res.locals ??= {}).cspNonce = nonce;
