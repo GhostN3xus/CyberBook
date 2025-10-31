@@ -19,5 +19,6 @@ export const namespaces = [
   'auth',
   'admin',
   'contact',
-  'legal'
+  'legal',
+  'roadmap'
 ] as const;

@@ -1,0 +1,64 @@
+{
+  "title": "Roadmap de Segurança e Produto",
+  "intro": "Acompanhe como fortalecemos o CyberBook e ampliamos a jornada de aprendizagem. Cada trilha destaca o que já entregamos, o que está em execução e o que vem a seguir.",
+  "sections": [
+    {
+      "title": "Fundamentos de Segurança",
+      "description": "Reforço de autenticação, proteção de dados e salvaguardas da plataforma.",
+      "items": [
+        { "label": "CSP com nonce e entrega de conteúdo sanitizado", "status": "done" },
+        { "label": "Endurecimento do OAuth com validação de state e PKCE", "status": "in-progress" },
+        { "label": "Scanner automático de dependências e secrets na CI", "status": "planned" }
+      ]
+    },
+    {
+      "title": "Observabilidade e Operações",
+      "description": "Visibilidade, confiabilidade e excelência operacional para a plataforma.",
+      "items": [
+        { "label": "Endpoint público de health check para monitores", "status": "done" },
+        { "label": "Logging estruturado com correlation IDs", "status": "in-progress" },
+        { "label": "Dashboards de SLO com alertas de latência e erros", "status": "planned" }
+      ]
+    },
+    {
+      "title": "Conteúdo e Comunidade",
+      "description": "Experiências educacionais que promovem hábitos secure-by-design.",
+      "items": [
+        { "label": "Revisão bilíngue da base de conhecimento com trilhas guiadas", "status": "in-progress" },
+        { "label": "Academy com desafios práticos e certificações", "status": "planned" },
+        { "label": "Playbooks colaborativos e briefings de ameaças", "status": "planned" }
+      ]
+    }
+  ],
+  "pages": {
+    "title": "Próximas experiências",
+    "description": "Essas seções expandirão o portal além das 16 páginas atuais.",
+    "items": [
+      {
+        "name": "Galeria de Casos de Uso",
+        "status": "planned",
+        "description": "Histórias reais de adoção de AppSec por indústria e maturidade do time."
+      },
+      {
+        "name": "CyberBook Academy",
+        "status": "planned",
+        "description": "Missões interativas com laboratórios, walkthroughs e acompanhamento de skills."
+      },
+      {
+        "name": "Status Operacional",
+        "status": "in-progress",
+        "description": "Disponibilidade em tempo real, janelas de manutenção e histórico de incidentes."
+      },
+      {
+        "name": "Relatórios de Segurança",
+        "status": "planned",
+        "description": "Centralização de relatórios de auditoria, achados CSP e guias de compliance."
+      }
+    ]
+  },
+  "status": {
+    "done": "Entregue",
+    "in-progress": "Em andamento",
+    "planned": "Planejado"
+  }
+}

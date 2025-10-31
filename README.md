@@ -14,10 +14,12 @@ apps/
 
 - Internacionalização completa (Português / Inglês) com `next-i18next`.
 - 16 páginas principais já estruturadas com conteúdo técnico exemplo.
+- Roadmap público detalhando segurança, operações e novas experiências planejadas.
 - Sistema de buscas e filtros em memória com React Query (cliente) e endpoints preparados no backend.
 - Anotações locais persistidas via `localStorage` e sincronização planejada com o backend.
 - Layout responsivo, tema escuro/claro automático e componentes acessíveis (Radix UI + ShadCN).
 - Backend modular com autenticação JWT + MFA, RBAC, auditoria e seed inicial do Prisma.
+- Observabilidade inicial com endpoint `/health` e limites de payload (1 MB) para proteger a API contra abuse.
 - Prontuário para integrações futuras (APIs externas, CI/CD, Snyk, OWASP Dependency-Check).
 
 ## Pré-requisitos
@@ -63,6 +65,14 @@ Copie os arquivos `.env.example` em cada projeto e ajuste as credenciais:
 | `pnpm run prisma:migrate` | Executa migrações. |
 | `pnpm run prisma:seed` | Popula o banco com dados base. |
 
+### Monitoramento e Diagnóstico
+
+- `GET /health` — retorna status geral do backend, uptime, versão e checagem básica do banco de dados (resposta JSON).
+
+## Documentação complementar
+
+- [docs/IMPROVEMENT_CHECKLIST.md](docs/IMPROVEMENT_CHECKLIST.md) — avaliação completa da plataforma, backlog priorizado e novas páginas planejadas.
+
 ## Deploy
 
 Scripts de GitHub Actions e manifestos Azure podem ser adicionados posteriormente. A aplicação foi pensada para:
@@ -75,9 +85,9 @@ Scripts de GitHub Actions e manifestos Azure podem ser adicionados posteriorment
 ## Próximos passos sugeridos
 
 1. Conectar o backend ao banco PostgreSQL e rodar as migrações Prisma.
-2. Implementar integração real com provedores OAuth2 (GitHub, Azure AD) e MFA.
-3. Publicar pipelines de CI/CD com análise SAST/DAST (Snyk, OWASP Dependency-Check, ZAP). 
-4. Estender a área administrativa com WYSIWYG seguro e workflows editoriais.
+2. Implementar integração real com provedores OAuth2 (GitHub, Azure AD) e MFA (inclui validação de `state` + PKCE).
+3. Publicar pipelines de CI/CD com análise SAST/DAST (Snyk, OWASP Dependency-Check, ZAP) e secret scanning.
+4. Estender a área administrativa com WYSIWYG seguro, workflows editoriais e dashboards descritos no roadmap público.
 
 ---
 

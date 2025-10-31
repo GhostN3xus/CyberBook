@@ -37,6 +37,7 @@ export function SiteHeader({ locale }: Props) {
     { href: `/${locale}/boas-praticas`, label: t('navigation.bestPractices') },
     { href: `/${locale}/ferramentas`, label: t('navigation.tools') },
     { href: `/${locale}/documentacoes`, label: t('navigation.docs') },
+    { href: `/${locale}/roadmap`, label: t('navigation.roadmap') },
     { href: `/${locale}/noticias`, label: t('navigation.news') },
     { href: `/${locale}/contato`, label: t('navigation.contact') }
   ];
