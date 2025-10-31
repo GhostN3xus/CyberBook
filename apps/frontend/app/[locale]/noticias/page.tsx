@@ -1,8 +1,9 @@
 import { createTranslation } from '../../i18n';
-import { newsFeed } from '../../../data/news';
+import { getSanitizedNewsFeed } from '../../../lib/news-feed';
 
 export default async function NewsPage({ params }: { params: { locale: 'pt' | 'en' } }) {
   const { t } = await createTranslation(params.locale, 'news');
+  const newsFeed = getSanitizedNewsFeed();
 
   return (
     <section className="space-y-10">
@@ -21,8 +22,8 @@ export default async function NewsPage({ params }: { params: { locale: 'pt' | 'e
                 {typeof entry.summary === 'string' ? entry.summary : entry.summary[params.locale]}
               </p>
             </div>
-            {entry.metadata?.url && (
-              <a href={entry.metadata.url as string} className="text-sm text-brand-neon" target="_blank" rel="noreferrer">
+            {typeof entry.metadata?.url === 'string' && (
+              <a href={entry.metadata.url} className="text-sm text-brand-neon" target="_blank" rel="noreferrer">
                 {entry.metadata.url}
               </a>
             )}

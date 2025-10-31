@@ -2,7 +2,7 @@ import { createTranslation } from '../i18n';
 import { owaspTop10 } from '../../data/owasp-top10';
 import { owaspApiTop10 } from '../../data/owasp-api-top10';
 import { tools } from '../../data/tools';
-import { newsFeed } from '../../data/news';
+import { getSanitizedNewsFeed } from '../../lib/news-feed';
 import { tutorials } from '../../data/tutorials';
 import { SearchDialog } from '../../components/search/search-dialog';
 import { slugify } from '../../lib/utils';
@@ -11,12 +11,14 @@ import type { SearchableContent } from '../../types/content';
 export default async function HomePage({ params }: { params: { locale: 'pt' | 'en' } }) {
   const { t, i18n } = await createTranslation(params.locale, ['home', 'common']);
 
+  const sanitizedNewsFeed = getSanitizedNewsFeed();
+
   const searchContent: SearchableContent[] = [
     ...owaspTop10.map((item) => ({ ...item, slug: `checklists/owasp-top-10#${slugify(item.title.en)}` })),
     ...owaspApiTop10.map((item) => ({ ...item, slug: `checklists/owasp-api-top-10#${slugify(item.title.en)}` })),
     ...tools.map((item) => ({ ...item, slug: `ferramentas#${slugify(typeof item.title === 'string' ? item.title : item.title.en)}` })),
     ...tutorials.map((item) => ({ ...item, slug: `guias-praticos#${slugify(typeof item.title === 'string' ? item.title : item.title.en)}` })),
-    ...newsFeed.map((item) => ({ ...item, slug: `noticias#${item.slug}` }))
+    ...sanitizedNewsFeed.map((item) => ({ ...item, slug: `noticias#${item.slug}` }))
   ];
 
   return (
@@ -67,7 +69,7 @@ export default async function HomePage({ params }: { params: { locale: 'pt' | 'e
           </a>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
-          {newsFeed.map((entry) => (
+          {sanitizedNewsFeed.map((entry) => (
             <article key={entry.slug} className="rounded-xl border border-slate-800 bg-slate-900/40 p-6">
               <h3 className="text-lg font-semibold text-brand-neon">
                 {typeof entry.title === 'string' ? entry.title : entry.title[params.locale]}
